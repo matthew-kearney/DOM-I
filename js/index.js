@@ -51,6 +51,8 @@ nav[4].textContent = siteContent["nav"]["nav-item-5"];
 nav[5].textContent = siteContent["nav"]["nav-item-6"];
 
 
+
+
 const domh1 = document.querySelector('.cta h1');
 domh1.textContent = siteContent["cta"]["h1"]
 
@@ -79,17 +81,6 @@ maincontentp[4].textContent = siteContent["main-content"]["vision-content"];
 let codeimg = document.getElementById("middle-img");
 codeimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-// let C4 = document.querySelector(".bottom-content h4");
-// C4.textContent = siteContent["contact"]["contact-h4"]
-
-// let address = document.querySelector(".bottom-content p");
-// address.textContent = siteContent["contact"]["address"]
-
-// let = document.querySelector(".bottom-content p");
-// address.textContent = siteContent["contact"]["address"]
-
-// let phone = document.querySelector(".bottom-content p")
-// phone.textContent = siteContent["contact"]["phone"]
 let contact = document.querySelector(".contact h4");
 contact.textContent = siteContent["contact"]["contact-h4"]
 
@@ -100,3 +91,23 @@ contactp[2].textContent = siteContent["contact"]["email"];
 
 let footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"]
+
+
+
+
+
+const newContent = document.createElement("a");
+newContent.textContent = "first";
+const parentElement = document.querySelector('nav');
+parentElement.prepend(newContent);
+
+const newContent2 = document.createElement("a");
+newContent2.textContent = "Last";
+const parentElement2 = document.querySelector('nav');
+parentElement2.append(newContent2);
+
+
+let navColor = document.querySelectorAll("a")
+navColor.forEach(element => {
+    element.style.color = '#008000';
+});
